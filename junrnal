@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>Jurnal Form</title>
+  <script>
+    function showFields(value) {
+    var jurnalField = document.getElementById("jurnal-field");
+    var jenisPengeluaranField = document.getElementById("jenis-pengeluaran-field");
+    var satuanField = document.getElementById("satuan-field");
+    var unitField = document.getElementById("unit-field");
+    var vendorField = document.getElementById("vendor-field");
+    var akunField = document.getElementById("akun-field");
+    var kategoriAsetField = document.getElementById("kategori-aset-field");
+    var sumberPemasukanField = document.getElementById("sumber-pemasukan-field");
+    var bonusField = document.getElementById("bonus-field");
+    var tarikField = document.getElementById("tarik-field");
+    var rekeningField = document.getElementById("rekening-field");
+    var nominalField = document.getElementById("nominal-field");
+
+    if (value == "Pembayaran Kursus") {
+      jurnalField.style.display = "block";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "none";
+      unitField.style.display = "none";
+      vendorField.style.display = "none";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+
+    } else if (value == "Pengeluaran") {
+      jurnalField.style.display = "none";
+      jenisPengeluaranField.style.display = "block";
+      satuanField.style.display = "block";
+      unitField.style.display = "block";
+      vendorField.style.display = "block";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+    } else if (value == "Pemindahan") {
+      jurnalField.style.display = "none";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "none";
+      unitField.style.display = "none";
+      vendorField.style.display = "none";
+      akunField.style.display = "block";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+    } else if (value == "Pembelian Aset") {
+      jurnalField.style.display = "none";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "block";
+      unitField.style.display = "block";
+      vendorField.style.display = "block";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "block";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+    } else if (value == "Pemasukan") {
+      jurnalField.style.display = "none";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "block";
+      unitField.style.display = "block";
+      vendorField.style.display = "block";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "block";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+    } else if (value == "Pembatalan") {
+      jurnalField.style.display = "block";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "none";
+      unitField.style.display = "none";
+      vendorField.style.display = "none";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "none";
+      nominalField.style.display = "none";
+    } else if (value == "Gaji") {
+      jurnalField.style.display = "none";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "none";
+      unitField.style.display = "none";
+      vendorField.style.display = "none";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "block";
+      tarikField.style.display = "block";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+    } else if (value == "Income") {
+      jurnalField.style.display = "block";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "none";
+      unitField.style.display = "none";
+      vendorField.style.display = "none";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "block";
+      nominalField.style.display = "block";
+    } else if (value == "Gagal") {
+      jurnalField.style.display = "block";
+      jenisPengeluaranField.style.display = "none";
+      satuanField.style.display = "none";
+      unitField.style.display = "none";
+      vendorField.style.display = "none";
+      akunField.style.display = "none";
+      kategoriAsetField.style.display = "none";
+      sumberPemasukanField.style.display = "none";
+      bonusField.style.display = "none";
+      tarikField.style.display = "none";
+      rekeningField.style.display = "none";
+      nominalField.style.display = "none";
+    }
+  }
+  function showAkun(kegiatanValue) {
+    var akun = document.getElementById("akun");
+    if (kegiatanValue == "Pembayaran Kursus") {
+      akun.options.length = 0;
+      akun.options[akun.options.length] = new Option('Pilih Rekening', '');
+      akun.options[akun.options.length] = new Option('Bank Mandiri', 'Bank Mandiri');
+      akun.options[akun.options.length] = new Option('Cash On Hand', 'Cash On Hand');
+    } else {
+      akun.options.length = 0;
+      akun.options[akun.options.length] = new Option('Pilih Rekening', '');
+      akun.options[akun.options.length] = new Option('Bank Mandiri', 'Bank Mandiri');
+      akun.options[akun.options.length] = new Option('Kas Bank Mandiri', 'Kas Bank Mandiri');
+      akun.options[akun.options.length] = new Option('Cash On Hand', 'Cash On Hand');
+      akun.options[akun.options.length] = new Option('OVO', 'OVO');
+      akun.options[akun.options.length] = new Option('Kartu Kredit', 'Kartu Kredit');
+      akun.options[akun.options.length] = new Option('Pay Pajak', 'Pay Pajak');
+      akun.options[akun.options.length] = new Option('Rekening Transit', 'Rekening Transit');
+
+    }
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .layar {
+        width: 70%;
+        margin: 0 auto;
+        height:auto;
+    }
+    @media screen and (max-width:768px) {
+        .layar {
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+    p {
+        font-size: 16px;
+    }
+    @media screen and (max-width:768px) {
+        .layar {
+            width: 95%;
+            padding: 0;
+            margin:0 auto;
+        }
+        form {
+            padding: 0;
+            margin:0;
+        }
+        .form-group {
+            margin: 0;
+            padding:0;
+        }
+    }
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    @media screen and (max-width:768px) {
+        .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+        }
+    }
+  </style>
+
+</head>
+<body>
+    
+  <div class="layar">
+      <h1 class="text-center">Jurnal Form</h1>
+      <form id="myForm" onsubmit="redirect(); return false;">
+        <div class="form-group form-date">
+            <label for="tanggal">Tanggal Transaksi</label>
+            <input type="date" class="form-control" id="tanggal" name="entry.1120121237" value="<?php echo date('Y-m-d'); ?>" required>
+        </div>
+  <div class="form-group">
+    <label for="kegiatan">Kegiatan</label>
+    <select class="form-control" id="kegiatan" name="entry.1286870061" onchange="showFields(this.value); showAkun(this.value)">
+        <option value="" disabled selected>Pilih Transaksi Jurnal</option>
+        <option value="Pembayaran Kursus">Pembayaran Kursus</option>
+      <option value="Pengeluaran">Pengeluaran</option>
+      <option value="Pemindahan">Pemindahan</option>
+      <option value="Pembelian Aset">Pembelian Aset</option>
+      <option value="Pemasukan">Pemasukan</option>
+      <option value="Pembatalan">Pembatalan</option>
+      <option value="Gaji">Gaji</option>
+      <option value="Income">Income</option>
+      <option value="Gagal">Gagal</option>
+    </select>
+  </div>
+
+  <div class="form-group" id="rekening-field" style="display:none;">
+            <label for="rekening">Rekening</label>
+            <select class="form-control" id="rekening" name="entry.1091632471" required>
+                <option value="" disabled selected>Dari Rekening?</option>
+            <option value="1">Bank Mandiri</option>
+            <option value="2">Kas Bank Mandiri</option>
+            <option value="3">Cash On Hand</option>
+            <option value="4">OVO</option>
+            <option value="5">Pay Pajak</option>
+            <option value="6">Rekening Transit</option>
+            <option value="7">Kartu Kredit</option>
+            </select>
+        </div>
+
+    <div class="form-group" id="nominal-field" style="display:none;">
+            <label for="nominal">Nominal</label>
+            <input type="number" class="form-control" id="nominal" name="entry.105402478" placeholder="Masukan Nominal" required>
+    </div>
+
+  <div class="form-group" id="jurnal-field" style="display:none;">
+    <label for="nomorjurnal">Jurnal</label>
+    <input type="text" class="form-control" id="nomorjurnal" name="entry.2068386149" placeholder="Nomor Jurnal" required>
+  </div>
+
+  <div class="form-group" id="jenis-pengeluaran-field" style="display:none;">
+    <label for="jenis-pengeluaran">Jenis Pengeluaran</label>
+    <select class="form-control" id="jenis-pengeluaran" name="entry.2068386149" required>
+        <option value="" disabled selected>Pilih Kategori Pengeluaran</option>
+                <option>Alat Kantor</option>
+                <option>Alat Kebersihan</option>
+                <option>Asrama</option>
+                <option>Bangunan</option>
+                <option>Biaya Bank</option>
+                <option>BPJS Kesehatan</option>
+                <option>BPJS Ketenagakerjaan</option>
+                <option>Bunga Cicilan</option>
+                <option>CSR</option>
+                <option>Diskon</option>
+                <option>Gaji Lepas</option>
+                <option>Internal</option>
+                <option>Kartu Kredit</option>
+                <option>Kemahasiswaan</option>
+                <option>Komunikasi</option>
+                <option>Konsumsi Siswa</option>
+                <option>Logistik</option>
+                <option>Maintenance</option>
+                <option>Marketing</option>
+                <option>Modal</option>
+                <option>Modal Gantungan</option>
+                <option>Modal Kantin</option>
+                <option>Modal Konsumsi</option>
+                <option>Modal Wifi</option>
+                <option>Ongkos Kirim</option>
+                <option>Pajak</option>
+                <option>Pajak Pegawai</option>
+                <option>Peliharaan</option>
+                <option>Penyewaan Gedung</option>
+                <option>Perizinan dan Hukum</option>
+                <option>Perkantoran</option>
+                <option>Pertamanan</option>
+                <option>Pinjaman</option>
+                <option>Subskripsi</option>
+                <option>Transportasi</option>
+                <option>Utilitas</option>
+    </select>
+  </div>
+
+  <div class="form-group" id="satuan-field" style="display:none;">
+    <label for="satuan">Satuan</label>
+    <input type="number" class="form-control" name="entry.331342793" placeholder="Berapa Banyak?" id="satuan">
+  </div>
+
+  <div class="form-group" id="unit-field" style="display:none;">
+    <label for="unit">Unit</label>
+    <select class="form-control" id="unit" name="entry.547520463" onchange="showOtherUnit(this.value)" required>
+        <option value="" disabled selected>Pilih Unit</option>
+        <option>Bulan</option>
+        <option>Hari</option>
+        <option>Kg</option>
+        <option>Minggu</option>
+        <option>Pcs</option>
+        <option>Tahun</option>
+        <option>Unit</option>
+        <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="form-group" id="unit-lainnya-field" style="display:none;">
+        <label for="unit-lainnya">Unit Lainnya</label>
+        <input type="text" class="form-control" name="entry.547520463" placeholder="Tulis Unit Lainnya" id="unit-lainnya">
+</div>
+
+
+
+  <div class="form-group" id="vendor-field" style="display:none;">
+    <label for="vendor">Vendor</label>
+    <input type="text" class="form-control" id="vendor" name="entry.289624066" placeholder="Nama Vendor" required>
+  </div>
+
+  <div class="form-group" id="akun-field" style="display:none;">
+    <label for="akun">Akun</label>
+    <select class="form-control" name="entry.2068386149" id="akun" required>
+        <option value="" disabled selected>Ke Rekening</option>
+        <option value="1">Bank Mandiri</option>
+        <option value="2">Kas Bank Mandiri</option>
+        <option value="3">Cash On Hand</option>
+        <option value="4">OVO</option>
+        <option value="5">Pay Pajak</option>
+        <option value="6">Rekening Transit</option>
+        <option value="7">Kartu Kredit</option>
+    </select>
+  </div>
+  <div class="form-group" id="kategori-aset-field" style="display:none;">
+    <label for="kategori-aset">Kategori Aset</label>
+    <select class="form-control" id="kategori-aset" name="entry.2068386149" required>
+        <option value="" disabled selected>Pilih Kategori Aset</option>
+        <option>Alat Pertukangan</option>
+                <option>Alat Taman</option>
+                <option>Buku Bacaan</option>
+                <option>Dekorasi</option>
+                <option>Elektronik</option>
+                <option>Hiburan dan Olah Raga</option>
+                <option>Perabotan dan Perlengkapan</option>
+                <option>Kantin</option>
+    </select>
+  </div>
+
+  <div class="form-group" id="sumber-pemasukan-field" style="display:none;">
+    <label for="sumber-pemasukan">Sumber Pemasukan</label>
+    <select class="form-control" id="sumber-pemasukan" name="entry.2068386149">
+        <option value="" disabled selected>Kategori Pemasukan</option>
+        <option>Hutang</option>
+        <option>Botol</option>
+        <option>Bunga Bank</option>
+        <option>Gantungan Kunci</option>
+        <option>Hoodie</option>
+        <option>Kamus</option>
+        <option>Kantin</option>
+        <option>Kaos</option>
+        <option>Konsumsi</option>
+        <option>Kunjungan</option>
+        <option>Outbound</option>
+        <option>Pembayaran Kursus Kolektif</option>
+        <option>Seminar Fee</option>
+        <option>Tote Bag</option>
+        <option>Ujian TOEFL</option>
+        <option>Voucher Wifi</option>
+    </select>
+  </div>
+  
+  <div class="form-group" id="bonus-field" style="display:none;">
+    <label for="bonus">Saldo Bonus</label>
+    <input type="number" class="form-control" name="entry.331342793" placeholder="Bonus Bulan Ini" id="bonus">
+  </div>
+
+  <div class="form-group" id="tarik-field" style="display:none;">
+    <label for="tarik">Penarikan Bonus</label>
+    <input type="number" class="form-control" name="entry.547520463" placeholder="Penarikan Bulan Ini" id="tarik">
+  </div>
+
+  <div class="form-group">
+            <label for="keterangan">Keterangan</label>
+            <input type="text" class="form-control" id="keterangan" placeholder="Keterangan" name="entry.265687072" required>
+        </div>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+function redirect() {
+  var tanggal = document.getElementById("tanggal").value;
+  var kegiatan = document.getElementById("kegiatan").value;
+  var rekening = document.getElementById("rekening").value;
+  var nominal = document.getElementById("nominal").value;
+  var vendor = document.getElementById("vendor").value;
+  var keterangan = document.getElementById("keterangan").value;
+  var detailInputs = document.getElementsByName("entry.2068386149");
+  var detail = "";
+  for (var i = 0; i < detailInputs.length; i++) {
+    if (detailInputs[i].value != "") {
+      detail = detailInputs[i].value;
+      break;
+    }
+  }
+  var satuanInputs = document.getElementsByName("entry.331342793");
+  var satuan = "";
+  for (var i = 0; i < satuanInputs.length; i++) {
+    if (satuanInputs[i].value != "") {
+      satuan = satuanInputs[i].value;
+      break;
+    }
+  }
+  var unitInputs = document.getElementsByName("entry.547520463");
+  var unit = "";
+  for (var i = 0; i < unitInputs.length; i++) {
+    if (unitInputs[i].value != "") {
+      unit = unitInputs[i].value;
+      break;
+    }
+  }
+
+  // replace spaces with "+" before adding to link's href
+  tanggal = "entry.1120121237=" + tanggal.replace(/ /g, "+");
+  kegiatan = "entry.1286870061=" + kegiatan.replace(/ /g, "+");
+  rekening = "entry.1091632471=" + rekening.replace(/ /g, "+");
+  nominal = "entry.105402478=" + nominal.replace(/ /g, "+");
+  vendor = "entry.289624066=" + vendor.replace(/ /g, "+");
+  keterangan = "entry.265687072=" + keterangan.replace(/ /g, "+");
+  detail = "entry.2068386149=" + detail.replace(/ /g, "+");
+  satuan = "entry.331342793=" + satuan.replace(/ /g, "+");
+  unit = "entry.547520463=" + unit.replace(/ /g, "+");
+
+  var link = document.createElement("a");
+  link.href = "https://docs.google.com/forms/d/e/1FAIpQLSeQA_ByP5y7moEedtQcsYaubCqwGYbkTItssuNIsYvBmU26GA/viewform?usp=pp_url&" + tanggal + "&" + kegiatan + "&" + rekening + "&" + nominal + "&" + vendor + "&" + keterangan + "&" + detail + "&" + satuan + "&" + unit;
+  window.location.href = link.href;
+}
+
+</script>
+
+</div>
+</body>
+</html>
